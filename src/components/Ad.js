@@ -19,7 +19,6 @@ const styles = {
         justifyContent: 'space-between',
         alignItems: 'center',
         margin: '20px',
-        width: '300px',
         backgroundColor: '#F3E5CE',
         color: '#003C52',
         textAlign: 'center',
@@ -29,7 +28,7 @@ const styles = {
     pic: {
         height: '200px',
         borderRadius: '5px',
-        marginTop: '10px'
+        margin: '10px'
     },
     text: {
         marginTop: '10px'

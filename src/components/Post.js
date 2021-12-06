@@ -38,7 +38,6 @@ const styles = {
         alignItems: 'center',
         backgroundColor: '#003c52',
         color: '#f3e5ce',
-        width: '40%',
         marginTop: '50px'
     },
     top: {
@@ -61,13 +60,11 @@ const styles = {
     },
     right: {
         display: 'flex',
-        justifyContent: 'space-between',
         alignItems: 'center',
-        width: '15%',
         fontSize: '2rem'
     },
     icon: {
-        marginLeft: '10px',
+        margin: '0 15px',
         width: '50%'
     },
     bottom: {
