@@ -4,9 +4,9 @@ const MainNav = props => {
     return (
         <nav style={styles.mainNav}>
             <ul style={styles.list}>
-                <li style={styles.item}>News Feed</li>
-                <li style={styles.item}>Messages</li>
-                <li style={styles.item}>Watch</li>
+                <li style={styles.item}>{props.nav1}</li>
+                <li style={styles.item}>{props.nav2}</li>
+                <li style={styles.item}>{props.nav3}</li>
             </ul>
         </nav>
     )

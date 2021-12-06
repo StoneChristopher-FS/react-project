@@ -2,15 +2,12 @@ import React from 'react';
 import Button from './Button';
 import Avatar from './Avatar';
 
-import AvatarIcon from '../images/profile-pic.jpg';
-
-
 const Form = props => {
     return (
         <form style={styles.form}>
             <input type="text" placeholder="Post Title..." style={styles.input} />
             <div style={styles.description}>
-                <Avatar AvatarIcon={AvatarIcon} AvatarAlt="Christopher Stone" />
+                <Avatar AvatarIcon={props.avatarIcon} AvatarAlt={props.avatarAlt} />
                 <input placeholder="Post Description..." style={styles.textArea} />
                 <Button btnText="Post" />
             </div>   

@@ -2,18 +2,13 @@ import React from 'react';
 
 import {MdDeleteForever, MdModeEditOutline} from 'react-icons/md';
 
-import Logo from '../images/logo.jpg'
-import Aerial from '../images/aerial.jpg'
-
-
-
 const Post = props => {
     return (
         <section style={styles.container}>
             <div style={styles.top}>
                 <div style={styles.left}>
-                    <img src={Logo} alt="Profile logo" style={styles.logo}/>
-                    <h1>Aerial Photography</h1>
+                    <img src={props.logo} alt={props.alt} style={styles.logo}/>
+                    <h1>{props.postTitle}</h1>
                 </div>
                 <div style={styles.right}>
                     <MdModeEditOutline style={styles.icon}/>
@@ -21,8 +16,8 @@ const Post = props => {
                 </div>
             </div>
             <div style={styles.bottom}>
-                <h3>Beautiful photo over the Chesapeake Bay in Maryland</h3>
-                <img src={Aerial} alt="Drone aerial over the Chesapeake Bay" style={styles.img} />
+                <h3>{props.postDescription}</h3>
+                <img src={props.postPhoto} alt={props.postAlt} style={styles.img} />
             </div>
         </section>
     )
