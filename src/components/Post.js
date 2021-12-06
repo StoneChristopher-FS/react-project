@@ -6,7 +6,7 @@ import AvatarIcon from '../images/profile-pic.jpg';
 
 const Post = props => {
     return (
-        <section style={styles.container}>
+        <section key={props.i} style={styles.container}>
             <div style={styles.top}>
                 <div style={styles.left}>
                     <img src={AvatarIcon} alt="Christopher Stone" style={styles.logo}/>
@@ -14,7 +14,7 @@ const Post = props => {
                 </div>
                 <div style={styles.right}>
                     <MdModeEditOutline style={styles.icon}/>
-                    <MdDeleteForever style={styles.icon}/>
+                    <MdDeleteForever onClick={props.delMe} style={styles.icon}/>
                 </div>
             </div>
             <div style={styles.bottom}>
@@ -62,7 +62,8 @@ const styles = {
     },
     icon: {
         margin: '0 15px',
-        width: '50%'
+        width: '50%',
+        cursor: 'pointer',
     },
     bottom: {
         display: 'flex',

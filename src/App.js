@@ -35,10 +35,18 @@ class App extends Component {
     e.target.reset()
   }
 
+  removePost = key => {
+    const newPostList = [...this.state.postList]
+    newPostList.splice(key, 1);
+    this.setState(() => ({
+      postList: newPostList
+    }));
+  }
+
   render() {
 
     let myPosts = this.state.postList.map((element, i) => {
-      return <Post key={i} val={element} />
+      return <Post key={i} val={element} delMe={() => this.removePost(i)} />
     })
 
 
