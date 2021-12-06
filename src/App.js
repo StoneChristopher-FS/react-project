@@ -7,13 +7,41 @@ import Ad from './components/Ad';
 
 import Home from './images/home.jpg';
 import WaterFront from './images/waterfront.jpg';
-import Logo from './images/logo.jpg'
 import Aerial from './images/aerial.jpg'
 import AvatarIcon from './images/profile-pic.jpg';
 
 
 class App extends Component {
+  state = {
+    postList: [
+      {
+        postTitle: 'Aerial Photography',
+        postDescription: 'Beautiful photo over the Chesapeake Bay in Maryland',
+        postImage: Aerial,
+        postAlt: 'Drone aerial over the Chesapeake Bay'
+      }
+    ]
+  }
+
+  getInput = e => {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
+  addPost = e => {
+    e.preventDefault()
+    this.setState({
+      postList: [{postTitle: this.state.postTitle, postDescription: this.state.postDescription}, ...this.state.postList]
+    });
+    e.target.reset()
+  }
+
   render() {
+
+    let myPosts = this.state.postList.map((element, i) => {
+      return <Post key={i} val={element} />
+    })
+
+
     return (
       <div className="App" style={styles.body}>
         <Header title="HouseHunter" avatarIcon={AvatarIcon} avatarAlt="Christopher Stone" userName="Christopher Stone" />
@@ -23,10 +51,10 @@ class App extends Component {
           </div>
           <div style={styles.main}>
             <div style={styles.card}>
-              <Form avatarIcon={AvatarIcon} avatarAlt="Christopher Stone" />
+              <Form avatarIcon={AvatarIcon} avatarAlt="Christopher Stone" getInput={this.getInput} addPost={this.addPost} />
             </div>
             <div style={styles.card}>
-              <Post logo={Logo} alt="Profile logo" postTitle="Aerial Photography" postDescription="Beautiful photo over the Chesapeake Bay in Maryland" postPhoto={Aerial} postAlt="Drone aerial over the Chesapeake Bay"  />
+              {myPosts}
             </div>
           </div>
           <aside style={styles.ad}>

@@ -2,13 +2,15 @@ import React from 'react';
 
 import {MdDeleteForever, MdModeEditOutline} from 'react-icons/md';
 
+import AvatarIcon from '../images/profile-pic.jpg';
+
 const Post = props => {
     return (
         <section style={styles.container}>
             <div style={styles.top}>
                 <div style={styles.left}>
-                    <img src={props.logo} alt={props.alt} style={styles.logo}/>
-                    <h1>{props.postTitle}</h1>
+                    <img src={AvatarIcon} alt="Christopher Stone" style={styles.logo}/>
+                    <h1>{props.val.postTitle}</h1>
                 </div>
                 <div style={styles.right}>
                     <MdModeEditOutline style={styles.icon}/>
@@ -16,8 +18,8 @@ const Post = props => {
                 </div>
             </div>
             <div style={styles.bottom}>
-                <h3>{props.postDescription}</h3>
-                <img src={props.postPhoto} alt={props.postAlt} style={styles.img} />
+                <h3>{props.val.postDescription}</h3>
+                <img src={props.val.postImage} alt={props.val.postAlt} style={styles.img} />
             </div>
         </section>
     )

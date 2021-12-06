@@ -4,11 +4,11 @@ import Avatar from './Avatar';
 
 const Form = props => {
     return (
-        <form style={styles.form}>
-            <input type="text" placeholder="Post Title..." style={styles.input} />
+        <form style={styles.form} onSubmit={props.addPost}>
+            <input type="text" name="postTitle" value={props.postTitle} onChange={props.getInput} placeholder="Post Title..." style={styles.input} />
             <div style={styles.description}>
                 <Avatar AvatarIcon={props.avatarIcon} AvatarAlt={props.avatarAlt} />
-                <input placeholder="Post Description..." style={styles.textArea} />
+                <input type="text" name="postDescription" value={props.postDescription} onChange={props.getInput} placeholder="Post Description..." style={styles.textArea} />
                 <Button btnText="Post" />
             </div>   
         </form>
@@ -19,6 +19,7 @@ export default Form
 
 const styles = {
     form: {
+        boxSizing: 'border-box',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
