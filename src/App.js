@@ -26,7 +26,7 @@ class App extends Component {
   getInput = e => {
     this.setState({[e.target.name]: e.target.value})
   }
-
+  //Nice work on add the post to the top of the list.
   addPost = e => {
     e.preventDefault()
     this.setState({
@@ -34,7 +34,7 @@ class App extends Component {
     });
     e.target.reset()
   }
-
+  //Try to use the filter method for the delete. It keeps the state pure. It does not cause mutation of the state.
   removePost = key => {
     const newPostList = [...this.state.postList]
     newPostList.splice(key, 1);
@@ -48,28 +48,25 @@ class App extends Component {
     let myPosts = this.state.postList.map((element, i) => {
       return <Post key={i} val={element} delMe={() => this.removePost(i)} />
     })
-
-
+    
     return (
-      <div className="App" style={styles.body}>
+      <div style={styles.container}>
         <Header title="HouseHunter" avatarIcon={AvatarIcon} avatarAlt="Christopher Stone" userName="Christopher Stone" />
-        <div style={styles.container}>
-          <div style={styles.nav}>
+        {/* <div style={styles.container}>
+          <div style={styles.nav}> */}
+          {/* </div> */}
+          <main style={styles.main}>
             <MainNav nav1="News Feed" nav2="Messages" nav3="Watch" />
-          </div>
-          <div style={styles.main}>
-            <div style={styles.card}>
+            {/* You can make a component for your cards. */}
+            <section style={styles.card}> 
               <Form avatarIcon={AvatarIcon} avatarAlt="Christopher Stone" getInput={this.getInput} addPost={this.addPost} />
-            </div>
-            <div style={styles.card}>
               {myPosts}
-            </div>
-          </div>
-          <aside style={styles.ad}>
-            <Ad adImg={Home} adTitle="Keller Williams Raleigh" adDescription="Sell your home with Keller Williams Today!!" />
-            <Ad adImg={WaterFront} adTitle="Water Front Property" adDescription="New water front property available!" />
-          </aside>
-        </div>
+            </section>
+            <aside style={styles.ad}>
+              <Ad adImg={Home} adTitle="Keller Williams Raleigh" adDescription="Sell your home with Keller Williams Today!!" />
+              <Ad adImg={WaterFront} adTitle="Water Front Property" adDescription="New water front property available!" />
+            </aside>
+          </main>
       </div>
     );
   }
@@ -79,16 +76,17 @@ export default App;
 
 const styles = {
   body: {
-    backgroundColor: '#003C52',
-    height: '100%'
+    // backgroundColor: '#003C52',
+    // height: '100%'
   },
   container: {
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center'
   },
   main: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#F3E5CE',
     height: '100%'

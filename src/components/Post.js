@@ -1,7 +1,5 @@
 import React from 'react';
-
 import {MdDeleteForever, MdModeEditOutline} from 'react-icons/md';
-
 import AvatarIcon from '../images/profile-pic.jpg';
 
 const Post = props => {

@@ -13,11 +13,12 @@ const MainNav = props => {
 }
 
 export default MainNav
-
+//Style everything in the nav here
 const styles = {
     mainNav: {
         backgroundColor: '#003C52',
-        color: '#F3E5CE'
+        color: '#F3E5CE',
+        width: '20%',
     },
     list: {
         listStyle: 'none',
