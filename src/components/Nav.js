@@ -6,17 +6,15 @@ import {FaGoogleWallet, FaMoneyBillWave} from 'react-icons/fa';
 import {MdSavings} from 'react-icons/md';
 import {GiPayMoney} from 'react-icons/gi';
 
-
-
 const Nav = () => {
     return (
         <nav style={styles.nav}>
             <span style={styles.icon}><FaGoogleWallet /></span>
-            <Link to="" style={styles.link}><RiDashboardFill /></Link>
-            <Link to="" style={styles.link}><HiDocumentReport /></Link>
-            <Link to="" style={styles.link}><FaMoneyBillWave /></Link>
-            <Link to="" style={styles.link}><MdSavings /></Link>
-            <Link to="" style={styles.link}><GiPayMoney /></Link>
+            <Link to="/Dashboard" style={styles.link}><RiDashboardFill /></Link>
+            <Link to="/Reports" style={styles.link}><HiDocumentReport /></Link>
+            <Link to="/Income" style={styles.link}><FaMoneyBillWave /></Link>
+            <Link to="/Savings" style={styles.link}><MdSavings /></Link>
+            <Link to="/Spending" style={styles.link}><GiPayMoney /></Link>
         </nav>
     )
 }

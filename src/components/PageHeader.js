@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const PageHeader = props => {
     return (
@@ -7,7 +8,7 @@ const PageHeader = props => {
                 <h1 style={styles.title}>{props.title}</h1>
             </div>
             <div style={styles.right}>
-                <img src={props.profileImg} alt="Profile avatar" style={styles.img} />
+                <Link to="/Settings"><img src={props.profileImg} alt="Profile avatar" style={styles.img} /></Link>
                 <p>{props.name}</p>
             </div>
 
