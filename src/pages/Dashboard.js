@@ -1,9 +1,15 @@
 import React from 'react';
+import AreaCharts from '../components/charts/AreaCharts';
+import PieCharts from '../components/charts/PieCharts';
 
 function Dashboard() {
     return (
         <div style={styles.container}>
             <h2 style={styles.title}>Dashboard</h2>
+            <div style={styles.charts}>
+                <PieCharts />
+                <AreaCharts />
+            </div>
         </div>
     )
 }
@@ -20,5 +26,10 @@ const styles = {
     title: {
         margin: '0px',
         padding: '39px 0 0 15px'
+    },
+    charts: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        marginTop: '50px'
     }
 }
