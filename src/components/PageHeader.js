@@ -8,7 +8,7 @@ const PageHeader = props => {
                 <h1 style={styles.title}>{props.title}</h1>
             </div>
             <div style={styles.right}>
-                <Link to="/Settings"><img src={props.profileImg} alt="Profile avatar" style={styles.img} /></Link>
+                <Link to="/Settings" style={styles.link}><img src={props.profileImg} alt="Profile avatar" style={styles.img} /></Link>
                 <p>{props.name}</p>
             </div>
 
@@ -37,6 +37,10 @@ const styles = {
         alignItems: 'center',
         width: '10%',
         paddingRight: '10px'
+    },
+    link: {
+        display: 'flex',
+        alignItems: 'center'
     },
     img: {
         height: '45px',

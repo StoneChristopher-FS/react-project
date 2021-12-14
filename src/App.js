@@ -37,6 +37,7 @@ export default App;
 const styles = {
   container: {
     display: 'flex',
+    backgroundColor: '#003C52'
   },
   left: {
     height: '100vh'

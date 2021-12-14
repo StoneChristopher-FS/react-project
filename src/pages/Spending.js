@@ -18,6 +18,7 @@ const styles = {
         color: '#F3E5CE'
     },
     title: {
-        margin: '0px'
+        margin: '0px',
+        padding: '39px 0 0 15px'
     }
 }

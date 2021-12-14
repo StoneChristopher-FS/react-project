@@ -6,3 +6,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a {
+  text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+  color: rgba(243, 229, 206, .5);
+}
+
+/* visited link */
+a:visited {
+  color: rgba(243, 229, 206, .5);
+}
+
+/* mouse over link */
+a:hover {
+  color: #F3E5CE;
+}
+
+/* selected link */
+a:active {
+  color: #00B4F5;
+}

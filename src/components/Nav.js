@@ -30,13 +30,13 @@ const styles = {
         backgroundColor: '#003C52'   
     },
     icon: {
+        paddingTop: '9px',
         paddingBottom: '60px',
         color: '#F3E5CE',
         fontSize: '2rem'
     },
     link: {
         paddingBottom: '30px',
-        color: '#F3E5CE',
         fontSize: '1.25rem'
     }
 }
