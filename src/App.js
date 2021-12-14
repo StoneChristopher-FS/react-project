@@ -6,11 +6,18 @@ import Income from './pages/Income';
 import Spending from './pages/Spending';
 import Savings from './pages/Savings';
 import Settings from './pages/Settings';
+import Nav from './components/Nav';
+import PageHeader from './components/PageHeader';
+import Avatar from './images/profile-pic.jpg';
 
 function App() {
   return (
-    <div>
-      <div>
+    <div style={styles.container}>
+      <div style={styles.left}>
+        <Nav />
+      </div>
+      <div style={styles.right}>
+        <PageHeader title="Wallet" profileImg={Avatar} name="Christopher Stone" />
         <Routes>
           <Route exact path='/' element={<Dashboard />} />
           <Route path='/Dashboard' element={<Dashboard />} />
@@ -26,3 +33,15 @@ function App() {
 }
 
 export default App;
+
+const styles = {
+  container: {
+    display: 'flex',
+  },
+  left: {
+    height: '100vh'
+  },
+  right: {
+    width: '100%'
+  }
+}
