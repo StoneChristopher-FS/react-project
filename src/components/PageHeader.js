@@ -4,14 +4,11 @@ import {Link} from 'react-router-dom';
 const PageHeader = props => {
     return (
         <header style={styles.header}>
-            <div>
-                <h1 style={styles.title}>{props.title}</h1>
-            </div>
+            <h1 style={styles.title}>{props.title}</h1>
             <div style={styles.right}>
                 <Link to="/Settings" style={styles.link}><img src={props.profileImg} alt="Profile avatar" style={styles.img} /></Link>
                 <p>{props.name}</p>
             </div>
-
         </header>
     )
 }

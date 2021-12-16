@@ -1,7 +1,4 @@
 import React from 'react';
-
-
-
 import {FaSearch} from 'react-icons/fa';
 import {BsFillGearFill} from 'react-icons/bs';
 
